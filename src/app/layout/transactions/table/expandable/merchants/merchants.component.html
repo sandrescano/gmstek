@@ -1,0 +1,33 @@
+<div nz-row [nzGutter]="32" class="merchants-row">
+    <div nz-col class="gutter-row merchants-col" [nzSpan]="24">
+        <nz-table class="merchants-table" [nzSize]="'small'" #basicTable [nzData]="merchants" [nzShowPagination]="false">
+            <thead class="head">
+                <tr>
+                    <th>Merchant Description</th>
+                    <th>Product Code</th>
+                    <th nzAlign="center">Quantity</th>
+                    <th nzAlign="right">Retail Price</th>
+                    <th nzAlign="right">Gov Price</th>
+                    <th nzAlign="right">Amount</th>
+                    <th [colSpan]="2"></th>
+                </tr>
+            </thead>
+            <tbody class="body">
+                <tr *ngFor="let data of basicTable.data">
+                    <td>{{ data.description }}</td>
+                    <td>{{ data.code }}</td>
+                    <td nzAlign="center">{{ data.quantity }}</td>
+                    <td nzAlign="right">{{ data.retailPrice }}</td>
+                    <td nzAlign="right">{{ data.govPrice }}</td>
+                    <td nzAlign="right">{{ data.amount | currency }}</td>
+                    <td><button class="dispute" nz-button nzType="default" nzBlock>Dispute</button></td>
+                    <td><button nz-button nzType="primary" nzBlock>Accept</button></td>
+                </tr>
+                <tr>
+                    <td [colSpan]="5"><strong>Total</strong></td>
+                    <td nzAlign="right"><strong>{{total | currency}}</strong></td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</div>

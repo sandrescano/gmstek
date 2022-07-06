@@ -1,0 +1,50 @@
+<div nz-row class="row" *ngIf="transactions.length > 0">
+    <div nz-col [nzSpan]="24" class="col">
+        <div nz-row [nzGutter]="24" class="accept-row">
+            <div nz-col class="gutter-row accept-row" [nzSpan]="8">
+                <nz-card class="accept-card">
+                    <div nz-row [nzGutter]="20">
+                        <div nz-col class="gutter-row main" [nzSpan]="12">
+                            <h4 nz-typography>Accept Transactions</h4>
+                            <h2 nz-typography>{{acceptTransactions}}</h2>
+                        </div>
+                        <div nz-col class="gutter-row title" [nzSpan]="10">
+                            <h5 nz-typography>New</h5>
+                            <h5 nz-typography>Disputed</h5>
+                        </div>
+                        <div nz-col class="gutter-row value" [nzSpan]="2">
+                            <h5 nz-typography>{{acceptTransactionsNew}}</h5>
+                            <h5 nz-typography>{{acceptTransactionsDisputed}}</h5>
+                        </div>
+                      </div>
+                </nz-card>
+            </div>
+            <div nz-col class="gutter-row invoice-row" [nzSpan]="12">
+                <nz-card class="invoice-card">
+                    <div nz-row [nzGutter]="32">
+                        <div nz-col class="gutter-row main" [nzSpan]="8">
+                            <h4 nz-typography>Invoice Tasks</h4>
+                            <h2 nz-typography>{{invoiceTasks}}</h2>
+                        </div>
+                        <div nz-col class="gutter-row title" [nzSpan]="6">
+                            <h5 nz-typography>New</h5>
+                            <h5 nz-typography>Delinquent</h5>
+                        </div>
+                        <div nz-col class="gutter-row value" [nzSpan]="2">
+                            <h5 nz-typography>{{invoiceTaskNew}}</h5>
+                            <h5 nz-typography>{{invoiceTaskDelinquent}}</h5>
+                        </div>
+                        <div nz-col class="gutter-row title" [nzSpan]="6">
+                            <h5 nz-typography>Disputed</h5>
+                            <h5 nz-typography>Rejected</h5>
+                        </div>
+                        <div nz-col class="gutter-row value" [nzSpan]="2">
+                            <h5 nz-typography>{{invoiceTaskDisputed}}</h5>
+                            <h5 nz-typography>{{invoiceTaskRejected}}</h5>
+                        </div>
+                      </div>
+                </nz-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<nz-layout>
+    <nz-spin [nzSpinning]="isLoading$ | async" nzTip="Loading...">
+        <nz-header>
+            <app-header [user]="user$ | async"></app-header>
+        </nz-header>
+        <nz-content>
+            <app-dashboard class="dashboard" [transactions]="transactions$ | async"></app-dashboard>
+            <app-transactions class="transactions" [transactions]="transactions$ | async"></app-transactions>
+        </nz-content>
+        <nz-footer>
+        </nz-footer>
+    </nz-spin>
+</nz-layout>

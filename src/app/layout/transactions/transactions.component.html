@@ -1,0 +1,13 @@
+<div nz-row class="row" *ngIf="transactions.length > 0">
+    <h3 nz-typography>Current Transactions</h3>
+    <div nz-col [nzSpan]="24" class="col">
+        <nz-tabset>
+            <nz-tab [nzTitle]="transactionToAcceptTitle">
+                <app-table [transactions]="transactions"></app-table>
+            </nz-tab>
+            <nz-tab [nzTitle]="transactionToReviewTitle">
+                <nz-empty></nz-empty> 
+            </nz-tab>
+        </nz-tabset>
+    </div>
+</div>

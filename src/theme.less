@@ -1,0 +1,434 @@
+// Custom Theming for NG-ZORRO
+// For more information: https://ng.ant.design/docs/customize-theme/en
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+// Override less variables to here
+// View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
+
+@primary-color: #0315bb;
+@secondary-color: #d6d3d3;
+
+.ant-spin-nested-loading {
+    height: 100%;
+}
+
+.ant-layout {
+    height: 100%;
+
+    &-header {
+        background-color: rgb(254, 254, 254);
+        padding: 0 0.3%;
+        -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+        box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+        text-align: end;
+    }
+}
+
+.input-serach-header {
+    border: none;
+}
+
+.dashboard {
+
+    & .row {
+
+        height: 40%;
+        padding: 1em 2em;
+
+        & .col {
+            padding: 1em 1em;
+            border-radius: 1rem;
+            background-color: @primary-color;
+            height: 100%;
+
+            & .accept-row {
+
+                height: 100%;
+
+                & .gutter-row.accept-row,
+                .gutter-row.invoice-row {
+
+
+                    & nz-card {
+                        -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+                        box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+                        border-radius: 0.6rem;
+                        border: none;
+                        height: 100%;
+
+                        &.accept-card {
+                            background-color: @secondary-color;
+                            text-align: center;
+
+                            & div {
+
+                                & .gutter-row.main {
+
+                                    & h2 {
+                                        margin: auto 0;
+                                    }
+
+                                }
+
+                                & .gutter-row.title {
+                                    text-align: left;
+
+                                    & h5 {
+                                        margin: 0.7em 0 0 0;
+                                        color: @primary-color;
+                                    }
+                                }
+
+                                & .gutter-row.value {
+                                    text-align: left;
+
+                                    & h5 {
+                                        margin: 0.7em 0 0 0;
+                                        color: @primary-color;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.invoice-card {
+                            text-align: center;
+
+                            & div {
+
+                                & .gutter-row.main {
+
+                                    & h2 {
+                                        margin: auto 0;
+                                    }
+
+                                }
+
+                                & .gutter-row.title {
+                                    text-align: left;
+
+                                    & h5 {
+                                        margin: 0.7em 0 0 0;
+                                        color: @primary-color;
+                                    }
+                                }
+
+                                & .gutter-row.value {
+                                    text-align: right;
+
+                                    & h5 {
+                                        margin: 0.7em 0 0 0;
+                                        color: @primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+}
+
+.transactions {
+    & .row {
+
+        height: 40%;
+        padding: 1em 2em;
+
+        & .col {
+            border-radius: 1rem;
+            height: 100%;
+        }
+    }
+}
+
+.ant-tabs-nav.ng-star-inserted {
+    border-bottom: 1px solid @secondary-color;
+}
+
+.controls {
+
+    height: 43px;
+    padding-right: 0.5em;
+
+    & .gutter-row {
+
+        & .control {
+            -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+            box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+            border-radius: 0.4em;
+            color: gray;
+        }
+    }
+
+}
+
+form nz-form-item {
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+.expandable {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    & .gutter-row.images {
+
+        padding: 1.5em 0 1.5em 0;
+
+        & .inner-box.container {
+            height: 600px;
+            background-color: @secondary-color;
+            border: 5px solid #0315bb4f;
+            border-radius: 1em;
+            padding: 1em;
+
+            & .count {
+                text-align: center;
+                bottom: 45px;
+                position: absolute;
+                margin: 0;
+                width: 80%;
+            }
+
+            & .carousel {
+                height: 90%;
+                padding: 5px;
+
+                & .image {
+                    position: relative;
+                    margin: 0;
+                    top: 50%;
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    padding: 2em;
+
+                    & img {
+
+                        border-radius: 1em;
+                    }
+
+                }
+
+                & .control {
+
+                    cursor: pointer;
+                    z-index: 1000;
+                    font-size: medium;
+                    height: 60%;
+                    width: 10%;
+
+                    &.right {
+                        position: absolute;
+                        margin: 0;
+                        top: 50%;
+                        right: 40px;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+
+                        & .icon {
+                            position: absolute;
+                            margin: 0;
+                            top: 50%;
+                            right: 0;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+
+                            &:hover {
+                                font-size: larger;
+                            }
+                        }
+                    }
+
+                    &.left {
+                        position: absolute;
+                        margin: 0;
+                        top: 50%;
+                        left: 40px;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+
+                        & .icon {
+                            position: absolute;
+                            margin: 0;
+                            top: 50%;
+                            left: 0;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+
+                            &:hover {
+                                font-size: larger;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+[nz-carousel-content] {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    color: #fff;
+    overflow: hidden;
+}
+
+h3 {
+    color: #fff;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.btn-zoom {
+    -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    bottom: 40px;
+    right: 40px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.btn-exclamation {
+    -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    bottom: 40px;
+    position: absolute;
+}
+
+tr.ant-table-expanded-row>td,
+tr.ant-table-expanded-row:hover>td {
+    background: white;
+}
+
+.ant-table {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    font-size: 14px;
+    background: #fff;
+    -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+}
+
+.ant-table-thead>tr>th {
+    position: relative;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    text-align: left;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.712);
+    transition: background 0.3s ease;
+}
+
+.ant-table table {
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 2px 0 0;
+    border-collapse: collapse !important ;
+    border-spacing: 0;
+}
+
+.merchants-row {
+    padding-top: 2em;
+    margin-bottom: 2em;
+
+    & button {
+        -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+        box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+        border-radius: 0.4em;
+
+        &.dispute {
+            background-color: gray;
+            color: white;
+            border: none;
+
+        }
+    }
+}
+
+.history-row {
+    padding-top: 2em;
+    margin-bottom: 2em;
+    color: @secondary-color;
+}
+
+.card-history {
+    height: 63%;
+
+    & .main-row{
+        height: 100%;
+
+        & .col-history{
+
+            & .history-row{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 0;
+                color: gray !important;
+            }
+
+        }
+    }
+
+    & .gutter-row.ant-col.ant-col-8 {
+
+        & p {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.ant-table-thead.history-table{
+    & .head > tr > th{
+        
+        color: gray !important;
+    }
+}
+
+.card {
+    padding-left: 2em;
+    margin-bottom: 0;
+
+    & p.card {
+
+        font-size: 12px;
+    }
+}
+
+.comments{
+
+    & p{
+        padding-left: 0.8em;
+        margin-bottom: 0;
+        color: gray;
+    }
+
+    & textarea{
+        border-radius: 0.4em;
+    }
+}
+
+.btn-send {
+    // -webkit-box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    // box-shadow: 5px 5px 9px -6px rgba(0, 0, 0, 0.82);
+    bottom: 0.1em;
+    right: 1.3em;
+    position: absolute;
+    z-index: 1000;
+    border: none;
+}
+

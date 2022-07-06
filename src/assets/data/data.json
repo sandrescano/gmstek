@@ -1,0 +1,184 @@
+{
+    "message": "Success",
+    "code": 200,
+    "data":{
+        "user":{
+            "id": 1,
+            "firstName": "Sergio",
+            "lastName": "Cano",
+            "profileImg": "https://media-exp2.licdn.com/dms/image/C4E03AQE_tCd1L3lqZA/profile-displayphoto-shrink_400_400/0/1616008331226?e=1661990400&v=beta&t=1VK3GIHH842l_wRparkwd2lGSgVMxLISpK6dKzRQ-Xg",
+            "notifications":[
+                {
+                    "id": 1,
+                    "status": 1,
+                    "notification": "Hello I'm a notification 1 new"
+                },
+                {
+                    "id": 2,
+                    "status": 2,
+                    "notification": "Hello I'm a notification 2 old"
+                }
+            ]
+        },
+        "transactions":[
+            {
+                "id": 1,
+                "date": "2022-06-30T00:00:00Z",
+                "merchInvoice": "123456",
+                "merchant": "ABC Fuel Company",
+                "location":{
+                    "name": "Miami International Airport",
+                    "iata": "MIA",
+                    "icoa": "KMIA"
+                },
+                "dodaac": "FP217",
+                "tail": "2F567E",
+                "item": "Fuel & Service",
+                "total": 8699.50,
+                "card": {
+                    "full": "1234567890123456",
+                    "mask": "************3456",
+                    "last": "3456"
+                },
+                "status": 1,
+                "isWarning": true,
+                "images":[                   
+                    {
+                        "id": 1,
+                        "name": "Image 1",
+                        "url": "https://i.picsum.photos/id/1005/400/400.jpg?hmac=MLVMY__TiAmf9rgFrb4zjdPZMIvvm2b1JupSB0Gr7Ls"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Image 2",
+                        "url": "https://i.picsum.photos/id/290/400/400.jpg?hmac=FSTmB71D6RH1nToOf4l_Lem0TiCUQ8T2nj9qYRN9jiY"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Image 3",
+                        "url": "https://i.picsum.photos/id/66/400/400.jpg?hmac=fN03ySo9EkHahi_Dsaaf7mvUlg--4MeCiRqHNdrrqsI"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Image 4",
+                        "url": "https://i.picsum.photos/id/930/400/400.jpg?hmac=OchcmNUl50qcDgsUCHCZP-Fmqj9tbHs8wfY4G5S5R3g"
+                    }
+                ],
+                "merchants":[
+                    {
+                        "id": 1,
+                        "description": "Jet A",
+                        "code": "9130013054097",
+                        "quantity": 1.926,
+                        "retailPrice": 4.36,
+                        "govPrice": 4.36,
+                        "amount": 8397.36
+                    },
+                    {
+                        "id": 2,
+                        "description": "Cleaning",
+                        "code": "1019",
+                        "quantity": 1,
+                        "retailPrice": 324.11,
+                        "govPrice": 302.14,
+                        "amount": 302.14
+                    }
+                ],
+                "history":[
+                    {
+                        "id": 1,
+                        "description": "Transaction created",
+                        "date": "2022-06-30T00:00:00Z"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Transaction delayed",
+                        "date": "2022-06-30T00:00:00Z"
+                    }
+                ],
+                "expand": true,
+                "checked": false,
+                "disabled": false
+            },
+            {
+                "id": 2,
+                "date": "2022-06-30T00:00:00Z",
+                "merchInvoice": "123456",
+                "merchant": "ABC Fuel Company",
+                "location":{
+                    "name": "Miami International Airport",
+                    "iata": "MIA",
+                    "icoa": "KMIA"
+                },
+                "dodaac": "FP217",
+                "tail": "2F567E",
+                "item": "Fuel & Service",
+                "total": 8699.50,
+                "card": {
+                    "full": "1234567890123456",
+                    "mask": "************3456",
+                    "last": "3456"
+                },
+                "status": 1,
+                "isWarning": true,
+                "images":[                   
+                    {
+                        "id": 1,
+                        "name": "Image 1",
+                        "url": "https://i.picsum.photos/id/1005/400/400.jpg?hmac=MLVMY__TiAmf9rgFrb4zjdPZMIvvm2b1JupSB0Gr7Ls"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Image 2",
+                        "url": "https://i.picsum.photos/id/290/400/400.jpg?hmac=FSTmB71D6RH1nToOf4l_Lem0TiCUQ8T2nj9qYRN9jiY"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Image 3",
+                        "url": "https://i.picsum.photos/id/66/400/400.jpg?hmac=fN03ySo9EkHahi_Dsaaf7mvUlg--4MeCiRqHNdrrqsI"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Image 4",
+                        "url": "https://i.picsum.photos/id/930/400/400.jpg?hmac=OchcmNUl50qcDgsUCHCZP-Fmqj9tbHs8wfY4G5S5R3g"
+                    }
+                ],
+                "merchants":[
+                    {
+                        "id": 1,
+                        "description": "Jet A",
+                        "code": "9130013054097",
+                        "quantity": 1.926,
+                        "retailPrice": 4.36,
+                        "govPrice": 4.36,
+                        "amount": 8397.36
+                    },
+                    {
+                        "id": 2,
+                        "description": "Cleaning",
+                        "code": "1019",
+                        "quantity": 1,
+                        "retailPrice": 324.11,
+                        "govPrice": 302.14,
+                        "amount": 302.14
+                    }
+                ],
+                "history":[
+                    {
+                        "id": 1,
+                        "description": "Transaction created",
+                        "date": "2022-06-30T00:00:00Z"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Transaction delayed",
+                        "date": "2022-06-30T00:00:00Z"
+                    }
+                ],
+                "expand": true,
+                "checked": false,
+                "disabled": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+<div nz-row [nzGutter]="16" class="controls">
+    <div nz-col class="gutter-row search" [nzSpan]="14">
+        <nz-input-group [nzPrefix]="prefixTemplateUser" class="control">
+            <input type="text" nz-input [placeholder]="placeholder" />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser>
+            <i nz-icon nzType="search" nzTheme="outline"></i>
+        </ng-template>
+    </div>
+    <div nz-col class="gutter-row filter" [nzSpan]="2">
+        <button nz-button nzType="default" class="control">
+            <i nz-icon nzType="filter" nzTheme="fill"></i>
+            Filter
+        </button>
+    </div>
+    <div nz-col class="gutter-row print" [nzSpan]="3" [nzPush]="2">
+        <button nz-button nzType="default" nzBlock class="control">
+            <i nz-icon nzType="printer" nzTheme="fill"></i>
+            Print Selected
+        </button>
+    </div>
+    <div nz-col class="gutter-row export" [nzSpan]="3" [nzPush]="2">
+        <button nz-button nzType="default" nzBlock class="control">
+            <i nz-icon nzType="download" nzTheme="outline"></i>
+            Export Selected
+        </button>
+    </div>
+</div>

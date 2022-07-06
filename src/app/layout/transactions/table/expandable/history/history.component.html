@@ -1,0 +1,26 @@
+<div nz-row [nzGutter]="32" class="history-row">
+    <div nz-col class="gutter-row history-col" [nzSpan]="24">
+        <nz-table class="history-table" [nzSize]="'small'" #basicTable [nzData]="history" [nzShowPagination]="false">
+            <thead class="head">
+                <tr>
+                    <th nzAlign="left" [colSpan]="5">History</th>
+                    <th nzAlign="center">Date and Time</th>
+                </tr>
+            </thead>
+            <tbody class="body">
+                <tr *ngFor="let data of basicTable.data">
+                    <td nzAlign="left" [colSpan]="5">{{ data.description }}</td>
+                    <td nzAlign="center">{{ data.date | date: 'MM/dd/yy HH:mm' }}</td>
+                </tr>
+            </tbody>
+        </nz-table>
+        <br>
+        <div class="comments">
+            <p nz-typography>Comments</p>
+            <button class="btn-send" nz-button nzType="default" nzShape="circle">
+                <i nz-icon nzType="send" nzTheme="outline"></i>
+            </button>
+            <textarea rows="2" nz-input placeholder="" [nzAutosize]="{ minRows: 2, maxRows: 3 }"></textarea>
+        </div>
+    </div>
+</div>

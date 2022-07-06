@@ -1,0 +1,54 @@
+<app-controls></app-controls>
+<br>
+<nz-table #dynamicTable [nzScroll]="{ x: null, y: null }" [nzData]="listOfData" [nzTableLayout]="'auto'"
+    [nzBordered]="false" [nzSimple]="false" [nzLoading]="false" [nzPaginationType]="'default'"
+    [nzPaginationPosition]="'bottom'" [nzShowSizeChanger]="false" [nzFrontPagination]="true" [nzShowPagination]="true"
+    [nzSize]="'small'" (nzCurrentPageDataChange)="currentPageDataChange($event)">
+    <thead>
+        <tr>
+            <th></th>
+            <th [nzChecked]="allChecked" [nzIndeterminate]="indeterminate"
+                (nzCheckedChange)="checkAll($event)"></th>
+            <th>Date</th>
+            <th>Merchant Invoice</th>
+            <th>Merchant</th>
+            <th>Location</th>
+            <th>ICAO/IATA</th>
+            <th>DoDAAC</th>
+            <th>Tail</th>
+            <th>Item</th>
+            <th>Total</th>
+            <th>Card</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let data of transactions; let i = index">
+            <tr>
+                <td [nzExpand]="expandSet.has(data.id)" (nzExpandChange)="onExpandChange(data.id, $event)"></td>
+                <td [nzChecked]="checkSet.has(data.id)" (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+                <td>
+                    <span nz-typography nzType="warning" *ngIf="data.isWarning">
+                        <i nz-icon nzType="warning" nzTheme="fill"></i>
+                    </span>{{ data.date | date : 'MM/dd/yy'}}</td>
+                <td>{{ data.merchInvoice }}</td>
+                <td>{{ data.merchant }}</td>
+                <td>{{ data.location.name }}</td>
+                <td>{{ data.location.icoa }}/{{ data.location.iata }}</td>
+                <td>{{ data.dodaac }}</td>
+                <td>{{ data.tail }}</td>
+                <td>{{ data.item }}</td>
+                <td>{{ data.total | currency }}</td>
+                <td>AIR Card&#174;{{ data.card.last }}</td>
+                <td>{{ data.status === 1 ? 'New':'' }}</td>
+                <td [nzEllipsis]="false">
+                    <i nz-icon nzType="plus" nzTheme="outline"></i>
+                </td>
+            </tr>
+            <tr [nzExpand]="expandSet.has(data.id)">
+                <app-expandable [transaction]="data"></app-expandable>
+            </tr>
+        </ng-container>
+    </tbody>
+</nz-table>

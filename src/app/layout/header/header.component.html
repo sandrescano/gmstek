@@ -1,0 +1,27 @@
+<div nz-row nzJustify="space-between" *ngIf="user">
+    <div nz-col [nzSpan]="12">
+        <nz-input-group class="input-serach-header" [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input [placeholder]="placeholder" />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser>
+            <i nz-icon nzType="search" nzTheme="outline"></i>
+        </ng-template>
+    </div>
+    <div nz-col [nzSpan]="4" *ngIf="user">
+        <nz-space [nzSize]="10" nzAlign="center" [nzWrap]="true">
+            <nz-badge *nzSpaceItem [nzDot]="false">
+                <i nz-icon nzType="setting" nzTheme="fill"></i>
+            </nz-badge>
+            <nz-badge *nzSpaceItem [nzDot]="true">
+                <i nz-icon nzType="bell" nzTheme="fill"></i>
+            </nz-badge>
+
+            <nz-divider *nzSpaceItem nzType="vertical"></nz-divider>
+            <span *nzSpaceItem nz-typography nzType="secondary">{{user.firstName}} {{user.lastName}}</span>
+            <nz-avatar *nzSpaceItem nzIcon="user" [nzSrc]="user.profileImg"></nz-avatar>
+            <nz-badge *nzSpaceItem [nzDot]="false">
+                <i nz-icon nzType="down" nzTheme="outline"></i>
+            </nz-badge>
+        </nz-space>
+    </div>
+</div>
